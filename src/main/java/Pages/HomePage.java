@@ -15,7 +15,7 @@ public class HomePage {
     }
     private By homePageTitle = By.xpath("//span/h6");
     public String getHomePageTitle() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         return wait.until(
                 ExpectedConditions.visibilityOfElementLocated(homePageTitle)
         ).getText();

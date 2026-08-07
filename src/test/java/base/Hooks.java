@@ -1,5 +1,6 @@
 package base;
 
+import Commons.ReadFromDataFiles;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +30,7 @@ public class Hooks {
         if (driver.get() != null) {
             driver.get().quit();
             driver.remove();
+            ReadFromDataFiles.clearCache(); // Clear cached data files after each test
         }
     }
 }
